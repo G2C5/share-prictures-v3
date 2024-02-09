@@ -1,0 +1,44 @@
+/* 版心 */
+.wrapper {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.test {
+  background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95));
+  background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.75), rgb(85 85 85 / 65%));
+  background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95));
+  background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95));
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100vh;
+    vertical-align: middle;
+    width: 1%;
+  }
+
+  &:after {
+    background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95));
+    background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.75), rgb(85 85 85 / 65%));
+    background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95));
+    background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95));
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+/* #region ------------------头部 */
+
+/* #endregion */
+/* #region ------------------头部 */
+/* #endregion */
+/* #region ------------------头部 */
+/* #endregion */
+/* #region ------------------头部 */
+/* #endregion */

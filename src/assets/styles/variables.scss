@@ -1,0 +1,74 @@
+$nav-mode: "light"; // 模式
+// $nav-mode: "dark"; // 模式
+/* 背景颜色 */
+$bgc-dark: rgba($color: #282828, $alpha: 0.77);
+$bgc-dark2: #282828;
+$bgc-dark-activity: #4b4b4b;
+$bgc-light: rgba($color: #efefef, $alpha: 0.6);
+$bgc-light2: rgba($color: #e0e0e0, $alpha: 0.9);
+$bgc-light-activity: #bffdff;
+$bgc-color: $bgc-light;
+$bgc-color2: $bgc-light2;
+$bgc-activity: $bgc-light-activity;
+
+
+/* 文字颜色：和边框颜色、边框阴影颜色一致 */
+$text-dark: #efefef;
+$text-dark-activity: #22d3eb;
+$text-light: #4e4e4e;
+$text-light2: rgb(0, 0, 0);
+$text-light-activity: #0091f1;
+$text-color: $text-light;
+$text-color-rever: $text-dark;
+$text-color-activity: $text-dark-activity;
+/* 其它 */
+$user-border: #343434;
+
+/* 边框颜色 */
+$border-dark: #ffffff;
+$border-dark-activity: #2b2b2b;
+$border-light: #4b4b4b;
+$border-light-activity: #ffffff;
+$border-color: $bgc-light;
+$border-color-activity: $border-light-activity;
+/* 按钮 */
+$btn-light: #fefefe;
+$btn-light-selected: #ffffff;
+$btn-dark: #343434;
+$btn-dark-selected: #000000;
+$btn-color: $btn-light;
+$btn-color-select: $btn-light-selected;
+
+@if $nav-mode =="light" {
+  // 背景颜色
+  $bgc-color: $bgc-light;
+  $bgc-color2: $bgc-light2;
+  // 背景选中颜色
+  $bgc-activity: $bgc-light-activity;
+  // 文本颜色
+  $text-color: $text-light;
+  $text-color-rever: $text-dark;
+  // 文本选中颜色
+  $text-color-activity: $text-light-activity;
+  // 边框颜色
+  $border-color: $border-light;
+  // 边框选中颜色
+  $border-color-activity: $border-light-activity;
+  // 按钮颜色
+  $btn-color: $btn-light;
+  // 按钮选中颜色
+  $btn-color-select: $btn-light-selected;
+}
+
+@else {
+  $bgc-color: $bgc-dark;
+  $bgc-color2: $bgc-dark2;
+  $bgc-activity: $bgc-dark-activity;
+  $text-color: $text-dark;
+  $text-color-rever: $text-light2;
+  $text-color-activity: $text-dark-activity;
+  $border-color: $border-dark;
+  $border-color-activity: $border-dark-activity;
+  $btn-color: $btn-dark;
+  $btn-color-select: $btn-dark-selected;
+}
