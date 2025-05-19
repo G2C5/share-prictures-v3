@@ -1,0 +1,52 @@
+// 导入主题配置文件
+@import './_themes.scss';
+
+// 定义主题遍历 mixin
+@mixin theme-foreach {
+  @each $theme-name, $theme-map in $themes {
+    $theme-map: $theme-map !global; // 变量通过 !global 提升为全局变量，供后续取值使用
+    [data-theme='#{$theme-name}'] & {
+      // 插槽占位
+      @content;
+    }
+  }
+}
+
+// 获取主题属性值函数
+@function theme-value($key) {
+  @return map-get($theme-map, $key);
+}
+
+// 字体颜色  @include color('font-color1');
+@mixin color($color-key) {
+  @include theme-foreach {
+    color: theme-value($color-key) !important;
+  }
+}
+// 背景颜色  @include bgc-color('bgc-color1');
+@mixin bgc-color($color-key, $alpha: 1) {
+  @include theme-foreach {
+    background-color: rgba(theme-value($color-key), $alpha) !important;
+  }
+}
+// 边框颜色
+@mixin border($size, $type, $color-key, $direction: all) {
+  @include theme-foreach {
+    border-#{$direction}: #{$size}px $type theme-value($color-key) !important;
+  }
+}
+
+// 盒子阴影
+@mixin box-shadow($h-offset: 0, $v-offset: 0, $blur: 0, $spread: 0, $color-key) {
+  @include theme-foreach {
+    box-shadow: unquote($h-offset + 'px ' + $v-offset + 'px ' + $blur + 'px ' + $spread + 'px')
+      theme-value($color-key) !important;
+  }
+}
+// 文字阴影
+@mixin text-shadow($h-offset: 0, $v-offset: 0, $blur: 0, $color-key) {
+  @include theme-foreach {
+    text-shadow: unquote($h-offset + 'px ' + $v-offset + 'px ' + $blur + 'px')
+      theme-value($color-key) !important;
+  }
+}

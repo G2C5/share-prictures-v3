@@ -10,5 +10,6 @@
   ],
   "compilerOptions": {
     "moduleResolution": "node"
-  }
+  },
+  "types": ["vite/client"],
 }

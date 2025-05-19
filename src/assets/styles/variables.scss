@@ -1,74 +1,96 @@
-$nav-mode: "light"; // 模式
+$nav-mode: 'light'; // 模式
 // $nav-mode: "dark"; // 模式
 /* 背景颜色 */
-$bgc-dark: rgba($color: #282828, $alpha: 0.77);
-$bgc-dark2: #282828;
-$bgc-dark-activity: #4b4b4b;
-$bgc-light: rgba($color: #efefef, $alpha: 0.6);
-$bgc-light2: rgba($color: #e0e0e0, $alpha: 0.9);
-$bgc-light-activity: #bffdff;
-$bgc-color: $bgc-light;
-$bgc-color2: $bgc-light2;
-$bgc-activity: $bgc-light-activity;
+$bgc-dark1: #282828;
+$bgc-dark2: #3a3a3a;
+$bgc-dark3: #3a3a3a;
 
+$bgc-light1: #f1f1f1;
+$bgc-light2: #e0e0e0;
+$bgc-light3: #e0e0e0;
+
+$bgc-light-activity1: #ececec;
+$bgc-dark-activity1: #e9c8ff;
+
+$bgc-color1: $bgc-light1;
+$bgc-color2: $bgc-light2;
+$bgc-color3: $bgc-light3;
+$bgc-activity1: $bgc-light-activity1;
 
 /* 文字颜色：和边框颜色、边框阴影颜色一致 */
-$text-dark: #efefef;
-$text-dark-activity: #22d3eb;
-$text-light: #4e4e4e;
-$text-light2: rgb(0, 0, 0);
-$text-light-activity: #0091f1;
-$text-color: $text-light;
-$text-color-rever: $text-dark;
-$text-color-activity: $text-dark-activity;
+$text-light1: #242222;
+$text-light2: #1b1b1b;
+$text-light3: #1b1b1b;
+$text-light-activity1: #7979ff;
+$text-light-activity2: #b5cfff;
+$text-light-activity3: #ccebff;
+
+$text-dark1: #eeeeee;
+$text-dark2: #969696;
+$text-dark3: #969696;
+$text-dark-activity1: #ccccff;
+$text-dark-activity2: #ccccff;
+
+$text-color1: $text-light1;
+$text-color2: $text-light2;
+$text-color3: $text-light3;
+$text-color-rever1: $text-dark1;
+$text-color-activity1: $text-dark-activity1;
+$text-color-activity2: $text-dark-activity2;
 /* 其它 */
 $user-border: #343434;
 
 /* 边框颜色 */
-$border-dark: #ffffff;
-$border-dark-activity: #2b2b2b;
-$border-light: #4b4b4b;
-$border-light-activity: #ffffff;
-$border-color: $bgc-light;
-$border-color-activity: $border-light-activity;
+$border-dark1: #ffffff;
+$border-dark-activity1: #2b2b2b;
+$border-light1: #4b4b4b;
+$border-light-activity1: #ffffff;
+$border-color1: $bgc-light1;
+$border-color-activity1: $border-light-activity1;
 /* 按钮 */
-$btn-light: #fefefe;
-$btn-light-selected: #ffffff;
-$btn-dark: #343434;
-$btn-dark-selected: #000000;
-$btn-color: $btn-light;
-$btn-color-select: $btn-light-selected;
+$btn-light1: #fefefe;
+$btn-light-selected1: #ffffff;
+$btn-dark1: #343434;
+$btn-dark-selected1: #000000;
+$btn-color1: $btn-light1;
+$btn-color-select1: $btn-light-selected1;
 
-@if $nav-mode =="light" {
+@if $nav-mode == 'light' {
   // 背景颜色
-  $bgc-color: $bgc-light;
+  $bgc-color1: $bgc-light1;
   $bgc-color2: $bgc-light2;
+  $bgc-color3: $bgc-light3;
   // 背景选中颜色
-  $bgc-activity: $bgc-light-activity;
+  $bgc-activity1: $bgc-light-activity1;
   // 文本颜色
-  $text-color: $text-light;
-  $text-color-rever: $text-dark;
+  $text-color1: $text-light1;
+  $text-color2: $text-light2;
+  $text-color3: $text-light3;
+  $text-color-rever1: $text-dark1;
   // 文本选中颜色
-  $text-color-activity: $text-light-activity;
+  $text-color-activity1: $text-light-activity1;
+  $text-color-activity2: $text-light-activity2;
   // 边框颜色
-  $border-color: $border-light;
+  $border-color1: $border-light1;
   // 边框选中颜色
-  $border-color-activity: $border-light-activity;
+  $border-color-activity1: $border-light-activity1;
   // 按钮颜色
-  $btn-color: $btn-light;
+  $btn-color1: $btn-light1;
   // 按钮选中颜色
-  $btn-color-select: $btn-light-selected;
-}
-
-@else {
-  $bgc-color: $bgc-dark;
+  $btn-color-select1: $btn-light-selected1;
+} @else {
+  $bgc-color1: $bgc-dark1;
   $bgc-color2: $bgc-dark2;
-  $bgc-activity: $bgc-dark-activity;
-  $text-color: $text-dark;
-  $text-color-rever: $text-light2;
-  $text-color-activity: $text-dark-activity;
-  $border-color: $border-dark;
-  $border-color-activity: $border-dark-activity;
-  $btn-color: $btn-dark;
-  $btn-color-select: $btn-dark-selected;
+  $bgc-color3: $bgc-dark3;
+  $bgc-activity1: $bgc-dark-activity1;
+  $text-color-activity2: $text-dark-activity2;
+  $text-color1: $text-dark1;
+  $text-color2: $text-dark2;
+  $text-color3: $text-dark3;
+  $text-color-rever1: $text-light2;
+  $text-color-activity1: $text-dark-activity1;
+  $border-color1: $border-dark1;
+  $border-color-activity1: $border-dark-activity1;
+  $btn-color1: $btn-dark1;
+  $btn-color-select1: $btn-dark-selected1;
 }

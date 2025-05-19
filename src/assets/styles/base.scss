@@ -21,7 +21,7 @@ input {
 
 /* 內减模式 */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* 设置网页统一的字体大小、行高、字体系列相关属性 */
@@ -47,6 +47,7 @@ i {
 a {
   text-decoration: none;
   color: #333;
+  cursor: pointer;
 }
 
 /* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
@@ -77,6 +78,7 @@ input {
   content: "";
   display: table;
 }
+
 .clearfix::after {
   clear: both;
 }

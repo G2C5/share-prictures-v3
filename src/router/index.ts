@@ -1,24 +1,35 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import LoginView from '../views/LoginView.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import { routes } from './routes'
+import { useUserStore } from '@/store/user'
+
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/login',
-      name: 'login',
-      component: LoginView
-    },
-    {
-      path: '/register',
-      name: 'register',
-      component: () => import('@/views/RegisterView.vue')
-    },
-    {
-      path: '/',
-      redirect: 'login'
+  history: createWebHashHistory(),
+  routes: routes
+});
+
+router.beforeEach(async (to, from, next) => {
+  const userStore = useUserStore();
+  let token = userStore.loginInfo.token;
+  // 检查路由是否需要验证身份
+  if (to.meta.defaultShow) {
+    if (token) {
+      if (to.path === '/login' || to.path === '/register') {
+        console.log(to.path)
+        next('/rank')
+      } else {
+        next()
+      }
+    } else {
+      next()
     }
-  ]
+  } else {
+    if (token) {
+      next()
+    } else {
+      next('/login')
+    }
+  }
 })
 
 export default router
